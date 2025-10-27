@@ -48,7 +48,9 @@ class TestApp(unittest.TestCase):
         data = json.loads(response.data.decode('utf-8'))
 
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(data['post']['title'], 'Test Title')
+        self.assertEqual(data['post'], 'Test Title')
+#        self.assertEqual(data['post']['title'], 'Test Title')
+
         self.assertEqual(data['post']['content'], 'Test Content')
         self.assertEqual(data['post']['user_id'], 'user789')
 
