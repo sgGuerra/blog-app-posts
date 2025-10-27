@@ -12,6 +12,7 @@ db = client['blog']
 collection = db['posts']
 
 
+#hola
 
 @app.route('/', methods=['GET'])
 def hello_world():
